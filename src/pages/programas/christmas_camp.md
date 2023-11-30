@@ -2,7 +2,7 @@
 title: Christmas Camp
 subtitle: Diviértete en inglés
 tags: "programas"
-imagencabecera: xmas.png
+imagencabecera: 2023xmas.jpg
 components:
   - name: "posts-list-with-images"
     filter: programas

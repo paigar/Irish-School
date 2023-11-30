@@ -1,6 +1,6 @@
 ---
 title: "Sobre nosotros"
-imagencabecera: equipo.png
+imagencabecera: edificio.jpg
 permalink: /sobre-nosotros/
 css: ["posts-concat.css"]
 components:

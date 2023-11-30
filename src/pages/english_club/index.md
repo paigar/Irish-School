@@ -1,7 +1,7 @@
 ---
 title: English Club
 subtitle: Porque el aprendizaje del inglés puede ser divertido, desafiante y altamente gratificante
-imagencabecera: englishclub.png
+imagencabecera: engclub.jpg
 permalink: /english-club-irlandesas/
 components:
   - name: "posts-list-with-images"

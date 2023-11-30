@@ -2,7 +2,7 @@
 title: Inmersión en Familia
 subtitle: Convivencia con una familia irlandesa, disfrutando de su cultura y forma de vida diferente
 tags: "programas"
-imagencabecera: inmersion_familia.png
+imagencabecera: 2023inmersionfamilia.jpg
 css: ["integrate-first-component.css"]
 components:
   - name: "vertical-slider"

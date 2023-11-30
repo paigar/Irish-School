@@ -1,6 +1,6 @@
 ---
 title: Conócenos
-imagencabecera: equipo.png
+imagencabecera: equipo.jpg
 layout: base.njk
 permalink: false
 tags: slider

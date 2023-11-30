@@ -1,6 +1,6 @@
 ---
 title: Nuestra filosofía
-imagencabecera: filosofia.png
+imagencabecera: filosofia.jpg
 layout: base.njk
 permalink: false
 date: 2016-01-01

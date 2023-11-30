@@ -70,3 +70,8 @@ h4 {
 .legal input {
 	margin-top: 0.35rem;
 }
+@media (max-width: 40rem) {
+	.linea {
+		grid-template-columns: 1fr;
+	}
+}
