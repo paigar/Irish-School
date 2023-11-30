@@ -1,0 +1,56 @@
+{% set current = 0 %}
+{% set pags = pagination.pages | length %}
+{% set offset = 3 %}
+{% for pageEntry in pagination.pages %}
+  {% if page.url == pagination.hrefs[loop.index0] %}
+    {% set current = loop.index %}
+  {% endif %}
+{% endfor %}
+{% if ((current == 1)or(current == pags)) %}
+  {% set offset = offset + 1 %}
+{% endif %}
+
+<div class="wrapper">
+  <nav class="pagination"  aria-labelledby="paginacion-blog">
+    <p id="paginacion-blog">Página {{ current }} de {{ pags }}</p>
+    <ul>
+      <li>
+        {% if page.url != pagination.href.first %}
+          <a href="{{ pagination.href.first }}">{% include "svg/chevron-double-left.svg" %}</a>
+        {% else %}{% include "svg/chevron-double-left.svg" %}
+        {% endif %}
+      </li>
+      <li>
+        {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous }}">{% include "svg/chevron-left.svg" %}</a>
+        {% else %}{% include "svg/chevron-left.svg" %}
+        {% endif %}
+      </li>
+      {% if current > offset %}
+        <li>...</li>
+      {% endif %}
+      {%- for pageEntry in pagination.pages %}
+        {% if ((loop.index > current - offset) and (loop.index < current + offset)) %}
+          <li>
+            <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+          </li>
+        {% endif %}
+      {%- endfor %}
+      {% if current < (pags - offset) %}
+        <li>...</li>
+      {% endif %}
+      <li>
+        {% if pagination.href.next %}
+          <a href="{{ pagination.href.next }}">{% include "svg/chevron-right.svg" %}</a>
+        {% else %}{% include "svg/chevron-right.svg" %}
+        {% endif %}
+      </li>
+      <li>
+        {% if page.url != pagination.href.last %}
+          <a href="{{ pagination.href.last }}">{% include "svg/chevron-double-right.svg" %}</a>
+        {% else %}{% include "svg/chevron-double-right.svg" %}
+        {% endif %}
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,142 @@
+---
+title: "Contacta con nosotros"
+subtitle: Cuéntanos tus necesidades y analizaremos la mejor forma en la que podemos colaborar para convertir tu proyecto en un éxito
+permalink: /contacto/
+layout: base.njk
+css: ["page-head.css", "contacto.css", "legal.css"]
+js: ["modal.js"]
+imagencabecera: contacto.jpg
+components: 
+  - name: "posts-puzzle"
+    filter: nosotros
+    limit: 3
+    random: true
+    heading: "Conócenos"
+    link: ["Saber más", "/sobre-nosotros/"]
+---
+
+<div class="page {% if imagencabecera %}conimagen{% endif %}">
+  {% set titulo = title %}
+  {% set subtitulo = subtitle %}
+  {% set imagenfondo = imagencabecera %}
+  {% if subtitle %}
+    {% set alt = subtitle %}
+  {% else %}
+    {% set alt = title %}
+  {% endif %}
+  {% include 'partials/article-header.njk' %}
+</div>
+<div class="wrapper {% if client.address.mapLink %}conmapa{% endif %}">
+  <div class="contacto">
+    <div class="formulario">
+      <h2>Envíanos un mensaje</h2>
+      <form enctype="multipart/form-data" action="#" method="POST" id="contactform">
+        <div class="grupo">
+          <label for="f_nombre">Nombre:</label>
+          <input title="Mínimo 3 caracteres" name="f_nombre" id="f_nombre" pattern=".{3,}" required="required" type="text">
+        </div>
+        <div class="grupo">
+          <label for="f_email">Correo electrónico:</label>
+          <input title="Formato de email no válido" name="f_email" id="f_email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required="required" type="text">
+        </div>
+        <div class="grupo">
+          <label for="f_tfno">Teléfono:</label>
+          <input name="f_tfno" id="f_tfno"  type="text">
+        </div>
+        <div class="grupo">
+          <label for="f_mensaje">Mensaje:</label>
+          <textarea name="f_mensaje" id="f_mensaje" rows="4"></textarea>
+        </div>
+        <div class="legal">
+          <input type="checkbox" id="f_legal" name="f_legal" required="required">
+          <label for="f_legal">Acepto la <span class="abrirmodal">
+              <a target="_blank" href="/politica-de-privacidad/"> política de privacidad</a>
+            </span>
+          </label>
+        </div>
+        <div class="enviar">
+          <input type="hidden" name="f_asunto" value="Contacto desde {{ client.domain }}">
+          <button class="botonenviar" type="submit">Enviar {% include 'svg/chevron-right.svg' %}</button>
+        </div>
+      </form>
+    </div>
+    <div class="formascontacto">
+      {# Email #}
+      {% if client.email %}
+        <div class="forma">
+          {% include 'svg/envelope.svg' %}
+          <p>Escríbenos un email:</p>
+          <p>
+            <a href="mailto:{{ client.email }}">{{ client.email }}</a>
+          </p>
+        </div>
+      {% endif %}
+      {# Teléfonos #}
+      {% if client.tel.land or client.tel.mobile %}
+        <div class="forma">
+          {% include 'svg/phone-rotary.svg' %}
+          <p>Si prefieres hablar:</p>
+          {% if client.tel.land %}
+            <p>España <br/>
+              <a href="tel:{{ client.tel.land }}">{{ client.tel.landFormatted }}</a>
+            </p>
+          {% endif %}
+          {% if client.tel.mobile %}
+            <p>
+              <a href="tel:{{ client.tel.mobile }}">{{ client.tel.mobileFormatted }}</a>
+            </p>
+          {% endif %}
+          <p>Irlanda: <br/>
+            <a href="tel:+353838816278">+353 (0)83 881 6278</a>
+          </p>
+        </div>
+      {% endif %}
+      {# Social #}
+      {% set sociallinks = false %}
+      {% for red, link in client.social %}
+        {% if link %}
+          {% set sociallinks = true %}
+        {% endif %}
+      {% endfor %}
+      {% if sociallinks %}
+        <div class="forma">
+          {% include 'svg/chart-network.svg' %}
+          <p>También estamos en:</p>
+          <div class="sociallinks">
+            {% include "partials/menu-social.njk" %}
+          </div>
+        </div>
+      {% endif %}
+      {# Ubicación #}
+      {% if client.address.mapLink %}
+        <div class="forma">
+          {% include 'svg/map-marked-alt.svg' %}
+          <p>Ven a vernos:</p>
+          <p>{{ client.address.lineOne }}</p>
+          {% if client.address.lineTwo %}
+            <p>{{ client.address.lineTwo }}</p>
+          {% endif %}
+          <p>{{ client.address.zip }} - {{ client.address.city }} ({{ client.address.state }})</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% if client.address.mapLink %}
+  <div class="ubicacion">
+    <a class="cabecera-articulo enlacemapa" href="{{ client.address.mapLink }}" target="_blank">
+      {% imagen "mapa.jpg",
+      "Mapa de ubicación",
+      '',
+      '100vw' %}
+    </a>
+  </div>
+{% endif %}
+
+<div class="modal" data-cerrar="yes">
+  <button class="close-lightbox" data-cerrar="yes">{% include 'svg/times.svg' %}</button>
+  <div class="infolegal">
+    {% include "../_legal/politica-privacidad.md" %}
+  </div>
+</div>
+<script type="text/javascript" src="https://unpkg.com/showdown/dist/showdown.min.js"></script>

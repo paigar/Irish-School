@@ -1,0 +1,44 @@
+---
+title: "Eleventy Portfolio"
+layout: base.njk
+permalink: /
+css: ["slider.css"]
+js: ["slider.js"]
+components: 
+  - name: "posts-list-with-images"
+    filter: programas
+    style: "parrilla"
+    heading: "Nuestros programas"
+
+  - name: "posts-puzzle"
+    filter: nosotros
+    limit: 3
+    random: true
+    heading: "Conócenos"
+    link: ["Saber más", "/sobre-nosotros/"]
+
+  - name: call-to-action
+    filter: calltoaction
+
+---
+
+<div class="main-carousel nojava"
+  data-flickity='{ "cellAlign": "left", "wrapAround": true, "prevNextButtons": true, "autoPlay": 5000,  "pauseAutoPlayOnHover": false }'>
+  {% set listado = collections.slider | sortByOrder %}
+  {% for item in listado %}
+    {% set link = item.url | url %}
+    <div class="carousel-cell">
+      {% if item.data.imagencabecera %}
+        {% set alt = item.data.title %}
+        {% imagen item.data.imagencabecera,
+        alt,
+        '',
+        '100vw' %}
+      {% endif %}
+      <div class="texto wrapper">
+        <h2>{{ item.data.title }}</h2>
+        {{ item.content | safe }}
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,72 @@
+.infolegal blockquote:not([class]),
+.infolegal li,
+.infolegal p,
+.infolegal h1,
+.infolegal h2,
+.infolegal h3,
+.infolegal h4,
+.infolegal h5,
+.infolegal h6 {
+	max-inline-size: unset;
+}
+.infolegal p,
+.infolegal ul,
+.infolegal ol,
+.infolegal .tabla {
+	font-size: var(--fs--1);
+}
+.infolegal h2 {
+	font-size: var(--fs-1);
+}
+.infolegal h2::after {
+	display: none;
+}
+.infolegal h3 {
+	font-size: var(--fs-0);
+}
+.infolegal {
+	margin-bottom: 5rem;
+}
+.infolegal > * + * {
+	margin-top: 1em;
+}
+.infolegal > * + h2,
+.infolegal > * + h3 {
+	margin-top: 2em;
+}
+.infolegal ul {
+	list-style: none;
+	padding: 0;
+}
+.infolegal ul li {
+	position: relative;
+	padding-left: 2em;
+}
+.infolegal li + li,
+.infolegal ul ul {
+	margin-top: 0.5em;
+}
+.infolegal > ul li::before {
+	content: "";
+	position: absolute;
+	top: 0.3em;
+	left: 0.3em;
+	background-color: var(--color-accent1);
+	height: 1em;
+	width: 1em;
+	clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+	z-index: -1;
+}
+.tabla {
+	width: 100%;
+	border: 1px solid var(--color-bg-300);
+}
+.tabla td,
+.tabla th {
+	padding: 0.5em;
+	text-align: left;
+	border: 1px solid var(--color-bg-300);
+}
+.contenedortabla {
+	overflow-x: auto;
+}

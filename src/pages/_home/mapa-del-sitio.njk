@@ -1,0 +1,44 @@
+---
+title: Mapa del sitio
+layout: page.njk
+css: ["mapasitio.css"]
+permalink: /mapa-del-sitio/
+imagencabecera: mapa-sitio.jpg
+---
+<div class="mapadelsitio">
+  <ul>
+    {% for item in menus.menuPpal %}
+      <li>
+        {% set link = ["/", item.slug, "/"] | join %}
+        {% if item.slug == "/" %}{% set link = "/" %}
+        {% endif %}
+        <a href="{{ link }}">{{ item.text }}</a>
+        {% if item.dropdown %}
+          <ul>
+            {% for subitem in item.dropdown %}
+              {% set sublink = ["/", item.slug, "/", subitem.slug, "/"] | join %}
+              <li>
+                <a href="{{ sublink }}">{{ subitem.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if item.tag %}
+          <ul>
+            {% for subitem in collections[item.tag] %}
+              <li>
+                <a href="{{ subitem.url | url }}">{{ subitem.data.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+    {% for item in menus.menuPie %}
+      <li>
+        {% set link = ["/", item.slug, "/"] | join %}
+        <a href="{{ link }}">{{ item.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

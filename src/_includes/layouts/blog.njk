@@ -1,0 +1,34 @@
+---
+layout: base
+pagination:
+  data: collections.blogposts
+  size: 12
+  reverse: true
+permalink: "{{ title | slugify }}/{% if pagination.pageNumber > 0 %}pag-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+eleventyComputed:
+  css: ["page-head.css", "page-main.css", "page-animations.css", "pagination.css", "integrate-first-component.css", "components.css", "../components/{{styles.blog.format}}/css/default.css", "../components/{{styles.blog.format}}/css/{{styles.blog.style}}.css"]
+---
+<article class="page {% if imagencabecera %}conimagen{% endif %}">
+
+  {% set title = [
+    title, '<span>Página ', pagination.pageNumber + 1,
+    ' de ',
+    pagination.pages | length,
+    '</span>'
+  ] | join | safe %}
+  {% include 'partials/article-header.njk' %}
+
+  <div class="wrapper corporativo">
+    <div class="contenido">
+      <div class="flow">
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+</article>
+
+{% set listado = pagination.items %}
+<div class="component {{styles.blog.format}} {{styles.blog.format}}-{{styles.blog.style}}">
+  {% include 'components/posts-list-with-images/posts-list-with-images.njk' %}
+</div>
+{% include 'partials/pagination.njk' %}

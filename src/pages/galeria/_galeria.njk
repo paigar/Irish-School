@@ -1,0 +1,27 @@
+---
+title: "Galería de imágenes"
+subtitle: "Explora tus recuerdos a través de las imágenes de nuestros Programas de Inglés"
+css: ["galeria.css"]
+js: ["galeria.js"]
+permalink: /galeria/
+components: 
+  - name: call-to-action
+    filter: calltoaction
+
+
+---
+
+<div id="galeria">
+  {% for element in collections.galeria %}
+    {% if element.name %}
+      <button class="elementogaleria">
+        {% imagen element.src,
+        element.name,
+        '',
+        "100px" %}
+      </button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div id="lightbox" class="lightbox"></div>

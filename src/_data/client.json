@@ -1,0 +1,40 @@
+{
+	"siteName": "Irish School",
+	"domain": "irishschool.org",
+	"logo": "logo.png",
+	"logopie": "logopie.png",
+	"email": "info@irishschool.org",
+	"tel": {
+		"land": "+34944802172",
+		"landFormatted": "+34 944 802 172",
+		"mobile": "+34683101424",
+		"mobileFormatted": "+34 683 101 424"
+	},
+	"social": {
+		"rss": "",
+		"whatsapp": "",
+		"facebook": "http://www.facebook.com/pages/Irish-School/131489793608324",
+		"twitter": "",
+		"instagram": "https://www.instagram.com/irisheducaireland/",
+		"linkedin": "",
+		"youtube": "",
+		"tiktok": "",
+		"pinterest": "",
+		"skype": "",
+		"mastodon": "",
+		"discord": "",
+		"github": "",
+		"slideshare": "",
+		"flickr": "",
+		"vimeo": "",
+		"telegram": ""
+	},
+	"legal": {
+		"nombreLegal": "Irish School SL",
+		"nif": "B48766372",
+		"direccionFiscal": "Areetako Etorbidea 2-b. 48930 - Las Arenas / Getxo (BIZKAIA)",
+		"emailLegal": "info@irishschool.org",
+		"tfnoLegal": "+34 +34 94 480 21 72",
+		"datosRegistrales": "T 3249 , F 64, S 8, H BI 14254, I/A 4 (02/06/2022)"
+	}
+}

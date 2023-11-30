@@ -1,0 +1,4 @@
+{
+	"permalink": "/programas/{{ title | slugify }}/",
+	"layout": "page.njk"
+}

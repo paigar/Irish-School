@@ -1,0 +1,94 @@
+{% set activePage = page.url | url %}
+
+<footer>
+  <div class="logosdelpie">
+    <div class="wrapper">
+      <div class="logos"><img title="Beda" src="/assets/images/pie/beda.jpg" alt="Beda" width="120" height="120"><img title="Eca" src="/assets/images/pie/eca.jpg" alt="Eca" width="120" height="120"><img title="Toelf" src="/assets/images/pie/toelf.png" alt="Toelf" width="120" height="120"><img title="40years" src="/assets/images/pie/40years.jpg" alt="40years" width="120" height="120"><img title="Irlandesas" src="/assets/images/pie/irlandesas.jpg" alt="Irlandesas" width="234" height="120"></div>
+    </div>
+  </div>
+  <div class="pie">
+    <div class="wrapper">
+      <div class="doscol">
+        <div class="doscol">
+          <div class="logopie">
+            {% if client.logopie %}
+              <img src="/assets/images/{{ client.logopie }}" alt="{{ client.siteName }}">
+            {% else %}
+              {{ client.siteName }}
+            {% endif %}
+          </div>
+          <div class="datoscontacto">
+            {% if client.address.lineOne %}
+              <div class="direccion">
+                {% include 'svg/map-marker-alt.svg' %}
+                <div>
+                  <p>{{ client.address.lineOne }}</p>
+                  {% if client.address.lineTwo %}
+                    <p>{{ client.address.lineTwo }}</p>
+                  {% endif %}
+                  <p>{{ client.address.zip }} - {{ client.address.city }} ({{ client.address.state }})</p>
+                </div>
+              </div>
+            {% endif %}
+            {% if client.tel.land or client.tel.mobile %}
+              <div class="telefono">
+                {% include 'svg/phone-rotary.svg' %}
+                <div>
+                  {% if client.tel.land %}
+                    <p>
+                      <a href="tel:{{ client.tel.land }}">{{ client.tel.landFormatted }}</a>
+                    </p>
+                  {% endif %}
+                  {% if client.tel.mobile %}
+                    <p>
+                      <a href="tel:{{ client.tel.mobile }}">{{ client.tel.mobileFormatted }}</a>
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+            {% if client.email %}
+              <div class="email">
+                {% include 'svg/envelope.svg' %}
+                <div>
+                  <p>
+                    <a href="mailto:{{ client.email }}">{{ client.email }}</a>
+                  </p>
+                </div>
+              </div>
+            {% endif %}
+            <div class="direccion">
+              {% include 'svg/map-marker-alt.svg' %}
+              <div>
+                <p>Las Arenas - Bilbao</p>
+                <p>Delegaciones en Madrid, Sevilla, Alicante y Barcelona</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="doscol">
+          <nav class="menupie">
+            {% include "partials/menu-top.njk" %}
+          </nav>
+          <nav class="menupie">
+            {% include "partials/menu-bottom.njk" %}
+          </nav>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          <span class="nowrap">
+          &copy; {{ helpers.currentYear() }}
+            <a href="/" {% if activePage === '/' %} aria-current="page" {% endif %}>
+              {{ client.siteName }}
+            </a>
+          </span> · <span class="nowrap">Desarrollado por <a href="https://www.idenautas.com" target="_blank" rel="nofollow noopener noreferrer">Idenautas</a>
+          </span>
+        </p>
+        <nav id="social" class="rrss" aria-label="Social links">
+          {% include "partials/menu-social.njk" %}
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>

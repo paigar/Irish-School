@@ -1,0 +1,23 @@
+<ul class="menutop">
+  {% for item in menus.menuPpal %}
+    {% if item.slug == "/" %}
+      <li class="nav-item{% if page.url == "/" %} nav-item-active{% endif %}">
+        <a href="/">{{ item.text }}</a>
+      {% else %}
+        {% set link = ["/", item.slug, "/"] | join %}
+        <li class="nav-item{% if page.url != false and link in page.url %} nav-item-active{% endif %}">
+          <a href="{{ link }}">{{ item.text }}</a>
+        {% endif %}
+        {% if item.dropdown %}
+          <ul>
+            {% for subitem in item.dropdown %}
+              {% set sublink = ["/", item.slug, "/", subitem.slug, "/"] | join %}
+              <li class="nav-item{% if page.url != false and sublink in page.url %} nav-item-active{% endif %}">
+                <a href="{{ sublink }}">{{ subitem.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>

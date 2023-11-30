@@ -1,0 +1,73 @@
+.posts-list-with-images-alterno ul.postslist {
+	grid-template-columns: 1fr;
+	gap: var(--space-m);
+}
+.posts-list-with-images-alterno .blogitem {
+	display: grid;
+	grid-template-areas: "imagen" "titulo" "intro";
+	grid-template-columns: 1fr;
+	max-width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+.posts-list-with-images-alterno .blogitem picture {
+	grid-area: imagen;
+	overflow: hidden;
+}
+.posts-list-with-images-alterno .blogitem img {
+	transition: transform 300ms linear;
+}
+.posts-list-with-images-alterno .blogitem .titulo {
+	font-size: var(--fs-1);
+	font-weight: bold;
+	padding: 1em 1.5em 0;
+	grid-area: titulo;
+}
+.posts-list-with-images-alterno .blogitem .intro {
+	padding: 1em 1.5em 1.5em;
+	grid-area: intro;
+}
+.posts-list-with-images-alterno .blogitem .leermas {
+	display: inline-block;
+	margin-top: 1em;
+	font-size: var(--fs--1);
+	border: 1px solid var(--color-text);
+	padding: 0.5em 2em;
+	background-image: linear-gradient(
+		to right,
+		var(--color-accent1) 50%,
+		var(--color-bg) 50%
+	);
+	background-size: 200% 100%;
+	background-position: top right;
+	border-radius: var(--border-radius);
+	transition: all 0.3s linear;
+}
+.posts-list-with-images-alterno .blogitem:hover .leermas {
+	border: 1px solid var(--color-accent1);
+	background-position: top left;
+	color: var(--color-accent1-900);
+}
+.posts-list-with-images-alterno .blogitem:hover img {
+	transform: scale(1.1);
+}
+
+@media (min-width: 40rem) {
+	.posts-list-with-images-alterno .blogitem {
+		display: grid;
+		grid-template-areas: "imagen titulo" "imagen intro";
+		grid-template-columns: 1.3fr 2fr;
+		max-width: 100%;
+	}
+	.posts-list-with-images-alterno .blogitem:nth-last-of-type(2n) {
+		grid-template-areas: "titulo imagen" "intro imagen";
+		grid-template-columns: 2fr 1.3fr;
+	}
+	.posts-list-with-images-alterno .blogitem .titulo {
+		padding-top: 3em;
+	}
+	.posts-list-with-images-alterno .blogitem .intro {
+		padding-bottom: 3em;
+	}
+}

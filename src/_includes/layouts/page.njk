@@ -1,0 +1,27 @@
+---
+layout: base
+css: ["page-head.css", "page-main.css", "page-animations.css"]
+---
+
+<article class="page {% if imagencabecera %}conimagen{% endif %}">
+
+  {% include 'partials/article-header.njk' %}
+
+  <div class="wrapper contenido">
+    {% if icono %}
+      <div class="icono">
+        {% set svg = ["svg/iconos/", icono, '.svg'] | join %}
+        {% include svg %}
+      </div>
+    {% endif %}
+    <div class="flow">
+      {{ content | safe }}
+    </div>
+
+    {#     {% if tags %}
+      {% set coleccion = collections[tags] %}
+      {% include 'partials/coleccion.njk' %}
+    {% endif %} #}
+  </div>
+
+</article>

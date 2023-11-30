@@ -1,0 +1,83 @@
+.postpuzzle {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.postpuzzle .item {
+	background-color: var(--color-bg-800);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	margin-inline: auto;
+	position: relative;
+	align-content: center;
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+	isolation: isolate;
+	min-height: 25rem;
+}
+.postpuzzle .item:nth-child(1),
+.postpuzzle .item:nth-child(5) {
+	grid-row: span 2;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr fit-content(20rem);
+}
+.postpuzzle .item .contenido {
+	padding: 1.5em;
+	display: grid;
+	align-content: center;
+}
+.postpuzzle .item .contenido a {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+.postpuzzle .item .contenido a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+}
+.postpuzzle .imagen {
+	position: relative;
+	min-height: 22rem;
+	overflow: hidden;
+	background-image: linear-gradient(
+		to bottom,
+		var(--color-accent1-200),
+		var(--color-accent1)
+	);
+}
+.postpuzzle .imagen img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 300ms linear;
+	font-size: 0.1em;
+}
+.postpuzzle .item:hover img {
+	transform: scale(1.1);
+}
+.postpuzzle .botonenlace {
+	margin: 1em 0 0;
+	padding: 0.2em 1.5em;
+	font-weight: 400;
+	border-width: 1px;
+}
+.postpuzzle .item:hover .botonenlace {
+	background-position: left;
+	color: var(--color-accent1-900);
+}
+
+@media (min-width: 54rem) {
+	.postpuzzle {
+		grid-template-columns: 1fr 1fr;
+	}
+}

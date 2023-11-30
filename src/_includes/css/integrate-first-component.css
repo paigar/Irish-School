@@ -1,0 +1,4 @@
+.component:first-of-type {
+	padding-top: 0;
+	background-color: transparent !important;
+}

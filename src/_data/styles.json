@@ -1,0 +1,26 @@
+{
+	"colors": {
+		"colorBg": "#f0f0f0",
+		"colorText": "#151516",
+		"colorAccent1": "#6e9c42",
+		"colorAccent2": "#ff8e41",
+		"headerBg": "rgba(255,255,255,1)"
+	},
+	"fonts": {
+		"fontBase": "Inter",
+		"fontDisplay": "Inter"
+	},
+	"sizes": {
+		"widthWrapper": "80rem",
+		"widthText": "80rem",
+		"widthHeading": "35ch",
+		"headerHeightMobile": "4rem",
+		"headerHeightIntLaptop": "5rem",
+		"headerHeightExtLaptop": "7rem",
+		"borderRadius": "0.5rem"
+	},
+	"blog": {
+		"format": "posts-list-with-images",
+		"style": "head"
+	}
+}

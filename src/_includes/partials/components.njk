@@ -1,0 +1,30 @@
+{% for component in components %}
+  <div class="component {{ component.name }} 
+    
+    {% if component.style %}
+      {{component.name}}-{{component.style}}
+    {% endif %}">
+    {% if component.heading %}
+      <h2 class="title">{{component.heading}}</h2>
+    {% endif %}
+    {% if component.filter %}
+      {% set listado = collections[component.filter] %}
+    {% endif %}
+    {% if component.reverse %}
+      {% set listado = listado | reverse %}
+    {% endif %}
+    {% if component.random %}
+      {% set listado = listado | randomLimit(component.limit) %}
+    {% endif %}
+    {% if component.limit %}
+      {% set listado = listado | limit(component.limit) %}
+    {% endif %}
+    {% if component.programa %}
+      {% set programa = component.programa %}
+    {% endif %}
+    {% include['components/', component.name, "/", component.name, ".njk"] | join %}
+    {% if component.link[0] %}
+      <a class="botonenlace" href="{{component.link[1]}}">{{component.link[0]}}</a>
+    {% endif %}
+  </div>
+{% endfor %}

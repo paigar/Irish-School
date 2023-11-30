@@ -1,0 +1,76 @@
+{
+	"menuPpal": [
+		{ "text": "Inicio", "slug": "/" },
+		{
+			"text": "Programas",
+			"slug": "programas",
+			"dropdown": [
+				{
+					"text": "Summer Homestay",
+					"slug": "summer-homestay"
+				},
+				{
+					"text": "Inmersión en Familia",
+					"slug": "inmersion-en-familia"
+				},
+				{
+					"text": "Primer trimestre",
+					"slug": "primer-trimestre"
+				},
+				{
+					"text": "Medio Trimestre",
+					"slug": "medio-trimestre"
+				},
+				{
+					"text": "Irish Daycamp",
+					"slug": "irish-daycamp"
+				},
+				{
+					"text": "School Tours",
+					"slug": "school-tours"
+				},
+				{
+					"text": "Easter Camp",
+					"slug": "easter-camp"
+				},
+				{
+					"text": "Christmas camp ",
+					"slug": "christmas-camp"
+				}
+			]
+		},
+		{
+			"text": "Inscripciones",
+			"slug": "inscripcion",
+			"dropdown": [
+				{
+					"text": "Summer Homestay",
+					"slug": "summer-homestay"
+				},
+				{
+					"text": "Inmersión en Familia",
+					"slug": "inmersion-en-familia"
+				},
+				{
+					"text": "Primer trimestre",
+					"slug": "primer-trimestre"
+				},
+				{
+					"text": "Medio Trimestre",
+					"slug": "medio-trimestre"
+				}
+			]
+		},
+		{ "text": "English Club", "slug": "english-club-irlandesas" },
+		{ "text": "Nosotros", "slug": "sobre-nosotros" },
+		{ "text": "Contacto", "slug": "contacto" }
+	],
+	"menuPie": [
+		{ "text": "Galería", "slug": "galeria" },
+		{ "text": "Política de calidad", "slug": "politica-de-calidad" },
+		{ "text": "Aviso Legal", "slug": "aviso-legal" },
+		{ "text": "Política de privacidad", "slug": "politica-de-privacidad" },
+		{ "text": "Uso de cookies", "slug": "uso-de-cookies" },
+		{ "text": "Mapa del sitio", "slug": "mapa-del-sitio" }
+	]
+}

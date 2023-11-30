@@ -1,0 +1,17 @@
+{% set js %}
+{% include "js/app.js" %}
+{% for script in js %}
+  {% include["js/", script] | join %}
+{% endfor %}
+{% for component in components %}
+  {% if component.js %}
+    {% include['components/', component.name, "/js/script.js"] | join %}
+  {% endif %}
+{% endfor %}
+{% include "js/cookieconsent.js" %}
+{% include "js/cookieconsent-init.js" %}
+{% endset %}
+<!-- feed it through our jsmin filter to minify -->
+<script>
+  {{ js | jsmin | safe }}
+</script>

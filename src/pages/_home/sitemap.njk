@@ -1,0 +1,48 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for item in menus.menuPpal %}
+    {% set link = ["/", item.slug, "/"] | join %}
+    {% if item.slug == "/" %}{% set link = "/" %}
+    {% endif %}
+    <url>
+      <loc>https://{{ client.domain }}{{ link | url }}</loc>
+      <lastmod>{{ helpers.currentDate() }}</lastmod>
+      <changefreq>{{ item.data.sitemapChangefreq | default("monthly") }}</changefreq>
+      <priority>{{ item.data.sitemapPriority | default(0.8) }}</priority>
+    </url>
+    {% if item.dropdown %}
+      {% for subitem in item.dropdown %}
+        {% set sublink = ["/", item.slug, "/", subitem.slug, "/"] | join %}
+        <url>
+          <loc>https://{{ client.domain }}{{ sublink | url }}</loc>
+          <lastmod>{{ helpers.currentDate() }}</lastmod>
+          <changefreq>{{ item.data.sitemapChangefreq | default("monthly") }}</changefreq>
+          <priority>{{ item.data.sitemapPriority | default(0.8) }}</priority>
+        </url>
+      {% endfor %}
+    {% endif %}
+    {% if item.tag %}
+      {% for subitem in collections[item.tag] %}
+        <url>
+          <loc>https://{{ client.domain }}{{ subitem.url | url }}</loc>
+          <lastmod>{{ helpers.currentDate() }}</lastmod>
+          <changefreq>{{ item.data.sitemapChangefreq | default("monthly") }}</changefreq>
+          <priority>{{ item.data.sitemapPriority | default(0.8) }}</priority>
+        </url>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% for item in menus.menuPie %}
+    {% set link = ["/", item.slug, "/"] | join %}
+    <url>
+      <loc>https://{{ client.domain }}{{ link | url }}</loc>
+      <lastmod>{{ helpers.currentDate() }}</lastmod>
+      <changefreq>{{ item.data.sitemapChangefreq | default("monthly") }}</changefreq>
+      <priority>{{ item.data.sitemapPriority | default(0.8) }}</priority>
+    </url>
+  {% endfor %}
+</urlset>

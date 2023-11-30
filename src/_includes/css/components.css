@@ -1,0 +1,23 @@
+.component {
+	padding-block: var(--space-3xl);
+	background-color: var(--color-bg-300);
+}
+.component:nth-of-type(2n) {
+	background-color: var(--color-bg-200);
+}
+.component .title {
+	text-align: center;
+	margin: 0 auto 1em;
+	font-size: var(--fs-4);
+	padding-bottom: 0.3em;
+	position: relative;
+}
+.component .title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 40%;
+	width: 20%;
+	height: 0.3rem;
+	background-color: var(--color-accent1);
+}

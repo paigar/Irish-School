@@ -1,0 +1,40 @@
+{% set activePage = page.url | url %}
+{% set listado = listado | excludeByURL(activePage) %}
+{% if styles.modules.moduloblog == "blog-img-bg.css" %}
+  {% set width = "820" %}
+{% else %}
+  {% set width = "420" %}
+{% endif %}
+
+<div class="wrapper">
+  <ul class="postslist">
+    {% for item in listado %}
+      {% set link = item.url | url %}
+      <li class="blogitem">
+        {% if item.data.imagencabecera %}
+          {% set imagen = [
+            link, 'img/', item.data.imagencabecera | thumbname(width)
+          ] | join %}
+          <picture>
+            <source srcset="{{ imagen }}.avif" type="image/avif">
+            <source srcset="{{ imagen }}.webp" type="image/webp">
+            <img src="{{ imagen }}.jpg" alt="{{ item.data.title }} " loading="lazy"/>
+          </picture>
+        {% endif %}
+        <a class="titulo" href="{{ item.url | url }}">{{ item.data.title }}</a>
+        {% if item.data.date %}
+          <span class="fecha">{% include 'svg/calendar-alt.svg' %}
+            <date>{{ item.data.date | asPostDate }}</date>
+          </span>
+        {% endif %}
+        <div class="intro">
+          <p>
+            <span class="texto">{{ item.content | excerpt(200) }}</span>
+            <br/>
+            <span class="leermas">Seguir leyendo...</span>
+          </p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+{% set width = "420" %}
+{% set listado = listado | limit(6) %}
+
+<div class="wrapper">
+  <ul class="postpuzzle">
+    {% for item in listado %}
+      <li class="item">
+        {% if item.data.imagencabecera %}
+          {% set imagen = [
+            component.link[1], 'img/', item.data.imagencabecera | thumbname(width)
+          ] | join %}
+          <picture class="imagen">
+            <source srcset="{{ imagen }}.avif" type="image/avif">
+            <source srcset="{{ imagen }}.webp" type="image/webp">
+            <img src="{{ imagen }}.jpg" alt="{{ item.data.title }} " loading="lazy"/>
+          </picture>
+        {% endif %}
+        {% if loop.index == 1 or loop.index == 5 %}
+          {% set longtext = 200 %}
+        {% else %}
+          {% set longtext = 100 %}
+        {% endif %}
+        <div class="contenido">
+          <a class="titulo" href="{{ component.link[1] }}">{{ item.data.title }}</a>
+          <p>{{ item.content | excerpt(longtext) }}</p>
+          <p>
+            <span class="botonenlace">Leer más</span></p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+{% set activePage = page.url | url %}
+
+<ul class="postslist">
+  {% for item in listado %}
+    {% set link = item.url | url %}
+    {% if activePage != link %}
+      <li class="blogitem">
+        <a class="titulo" href="{{ item.url | url }}">{{ item.data.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,28 @@
+<!--Screen reader skip main nav-->
+<a class="skip sr-only" aria-label="skip to main content" href="#main">Ir al contenido</a>
+
+<header class="site-header" role="banner">
+  <div class="wrapper flex space-between">
+    {% set activePage = page.url | url %}
+    <a href="/" class="logo ajustar" {% if activePage === '/' %} aria-current="page" {% endif %}>
+      {% if client.logo %}
+        <img src="/assets/images/{{ client.logo }}" alt="{{ client.siteName }}">
+      {% else %}
+        {{ client.siteName }}
+      {% endif %}
+    </a>
+
+    <nav id="mainnav" class="navbar" aria-label="Main">
+      {% include "partials/menu-top.njk" %}
+    </nav>
+
+    <template id="burger-template">
+      <button class="hamburger" type="button" aria-expanded="false" aria-label="Menu" aria-controls="mainnav">
+        <span class="visually-hidden">Menu</span>
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </template>
+  </div>
+</header>

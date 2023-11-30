@@ -1,0 +1,85 @@
+.posts-list-with-images-bg .blogitem {
+	aspect-ratio: 3 / 4;
+	padding: calc(var(--space-m) - var(--space-s)) var(--space-m);
+	color: var(--color-accent1-900);
+	display: flex;
+	gap: var(--space-s);
+	flex-direction: column;
+	justify-content: flex-end;
+	transition: padding 300ms linear;
+	text-align: center;
+	border-radius: var(--border-radius);
+}
+.posts-list-with-images-bg .blogitem::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: linear-gradient(
+		to bottom,
+		transparent 20%,
+		var(--color-accent1-100) 40%,
+		var(--color-accent1-200)
+	);
+	background-size: 100% 200%;
+	background-position: top;
+	z-index: -1;
+	transition: background-position 300ms linear;
+}
+.posts-list-with-images-bg .blogitem a {
+	color: var(--color-accent1-900);
+	margin-top: auto;
+	font-weight: bold;
+}
+.posts-list-with-images-bg .blogitem a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+.posts-list-with-images-bg .blogitem picture {
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+}
+.posts-list-with-images-bg .blogitem .intro {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 300ms linear;
+}
+.posts-list-with-images-bg .blogitem .intro p {
+	overflow: hidden;
+	font-size: var(--fs--1);
+}
+.posts-list-with-images-bg .blogitem .intro .leermas {
+	display: block;
+	width: fit-content;
+	margin-top: var(--space-s);
+	margin-inline: auto;
+	background-color: var(--color-accent1-100);
+	padding: 0.5em 1.5em;
+	border-radius: var(--border-radius);
+}
+.posts-list-with-images-bg .blogitem .fecha {
+	display: flex;
+	gap: 1em;
+	width: fit-content;
+	margin-inline: auto;
+	align-items: center;
+	font-size: calc(var(--fs--1) * 0.85);
+}
+.posts-list-with-images-bg .blogitem .fecha svg {
+	fill: var(--color-accent1-900);
+	height: 1.2em;
+}
+.posts-list-with-images-bg .blogitem:hover {
+	padding: var(--space-m);
+}
+.posts-list-with-images-bg .blogitem:hover::after {
+	background-position: bottom;
+}
+.posts-list-with-images-bg .blogitem:hover .intro {
+	grid-template-rows: 1fr;
+	border-top: 1px solid var(--color-accent1-700);
+	padding-top: var(--space-s);
+	margin-top: calc(var(--space-s) / 2);
+}

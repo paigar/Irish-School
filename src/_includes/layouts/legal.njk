@@ -1,0 +1,13 @@
+---
+layout: base
+css: ["page-head.css", "legal.css"]
+---
+<article class="page {% if imagencabecera %}conimagen{% endif %}">
+
+  {% include 'partials/article-header.njk' %}
+
+  <div class="wrapper infolegal">
+    {{ content | safe }}
+  </div>
+
+</article>

@@ -1,0 +1,6 @@
+{% for red, link in client.social %}
+  {% if link %}
+    {% set svg = ["svg/social/", red, ".svg"] | join %}
+    <a href="{{ link }}" title="{{ red }}" target="_blank">{% include svg %}</a>
+  {% endif %}
+{% endfor %}

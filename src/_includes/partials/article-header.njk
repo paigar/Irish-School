@@ -1,0 +1,17 @@
+<div class="cabecera-articulo">
+  {% if imagencabecera %}
+    {% set alt = title %}
+    {% imagen imagencabecera,
+    alt,
+    '',
+    '100vw' %}
+  {% endif %}
+  <div class="titulo">
+    <div class="wrapper">
+      <h1>{{ title }}</h1>
+      {% if subtitle %}
+        <p>{{ subtitle }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>

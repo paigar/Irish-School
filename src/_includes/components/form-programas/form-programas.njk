@@ -1,0 +1,119 @@
+<div class="wrapper">
+  <form action="#" class="form_inscripcion">
+    <h4>Datos personales</h4>
+    <div class="linea">
+      <label for="email">E-mail *</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div class="linea">
+      <label for="apellidos">Family Name / Apellidos (tal y como aparecen en el DNI) *</label>
+      <input type="text" name="apellidos" id="apellidos" required>
+    </div>
+    <div class="linea">
+      <label for="nombre">Given Name / Nombre (tal y como aparecen en el DNI) *</label>
+      <input type="text" name="nombre" id="nombre" required>
+    </div>
+    <div class="linea">
+      <label for="direccion">Street Address / Dirección *</label>
+      <input type="text" name="direccion" id="direccion" required>
+    </div>
+    <div class="linea">
+      <label for="ciudad">City / Ciudad *</label>
+      <input type="text" name="ciudad" id="ciudad" required>
+    </div>
+    <div class="linea">
+      <label for="cp">Zip Code / C.Postal *</label>
+      <input type="text" name="cp" id="cp" required>
+    </div>
+    <div class="linea">
+      <label for="provincia">State / Provincia *</label>
+      <input type="text" name="provincia" id="provincia" required>
+    </div>
+    <div class="linea">
+      <label for="telefono">Phone / Teléfono *</label>
+      <input type="text" name="telefono" id="telefono" required>
+    </div>
+    <div class="linea">
+      <label for="dirvacaciones">Complete address and phone number during the Summer / Dirección y Teléfono en vacaciones *
+</label>
+      <textarea type="text" name="dirvacaciones" id="dirvacaciones" required></textarea>
+    </div>
+    <div class="linea">
+      <label for="sexo">Sex / Sexo *</label>
+      <select id="sexo" name="sexo" required>
+        <option value="" selected="selected">Choose / Elige:</option>
+        <option value="Hombre">Male / Hombre</option>
+        <option value="Mujer">Female / Mujer</option>
+      </select>
+    </div>
+    <div class="linea">
+      <label for="pasaportenum">Passport number / Número de Pasaporte *</label>
+      <input type="text" name="pasaportenum" id="pasaportenum" required>
+    </div>
+    <div class="linea">
+      <label for="pasaportedate">Fecha expiración del Pasaporte *</label>
+      <input type="date" name="pasaportedate" id="pasaportedate" required>
+    </div>
+    <div class="linea">
+      <label for="colegio">School Name / Colegio *</label>
+      <input type="text" name="colegio" id="colegio" required>
+    </div>
+    <div class="linea">
+      <label for="curso">Grade / Curso *</label>
+      <input type="text" name="curso" id="curso" required>
+    </div>
+    <div class="linea">
+      <label for="nacimiento">Date of Birth / Fecha de Nacimiento *</label>
+      <input type="date" name="nacimiento" id="nacimiento" required>
+    </div>
+    <div class="linea">
+      <label for="programadeingles">Programa de Inglés *</label>
+      <select name="programadeingles" id="programadeingles" required>
+        <option value="" {% if programa == "" %}selected{% endif %}>Choose / Elige:</option>
+        <option value="Summer Homestay" {% if programa == "summer" %}selected{% endif %}>Summer Homestay</option>
+        <option value="Inmersion en familia" {% if programa == "familia" %}selected{% endif %}>Summer Homestay</option>
+        <option value="Primer Trimestre" {% if programa == "primertrimestre" %}selected{% endif %}>Summer Homestay</option>
+        <option value="Medio Trimestre" {% if programa == "mediotrimestre" %}selected{% endif %}>Summer Homestay</option>
+      </select>
+    </div>
+    <h4>Datos de interes</h4>
+    <div class="linea">
+      <label for="hasviajado">Have you ever been abroad? / ¿Has tomado parte en algún otro curso de Inglés? ¿Con quién?
+</label>
+      <textarea type="text" name="hasviajado" id="hasviajado"></textarea>
+    </div>
+    <div class="linea">
+      <label for="convivientes">Persons living in your household / ¿Con quienes vives en tu casa?</label>
+      <input type="text" name="convivientes" id="convivientes">
+    </div>
+    <div class="linea">
+      <label for="profpadre">Father´s Name and Profession / Nombre del padre y Ocupación</label>
+      <input type="text" name="profpadre" id="profpadre">
+    </div>
+    <div class="linea">
+      <label for="profmadre">Mother´s Name and Profession / Nombre de la madre y Ocupación</label>
+      <input type="text" name="profmadre" id="profmadre">
+    </div>
+    <div class="linea">
+      <label for="hermanos">Names and Ages of Brothers and Sisters / Nombres y Edades de los Hermanos
+</label>
+      <textarea type="text" name="hermanos" id="hermanos"></textarea>
+    </div>
+    <div class="linea">
+      <label for="intereses">Describe your interests (sports,arts,others) / Hobbies
+</label>
+      <textarea type="text" name="intereses" id="intereses"></textarea>
+    </div>
+    <div class="legal">
+      <input type="checkbox" id="f_legal" name="f_legal" required="required">
+      <label for="f_legal">Doy mi consentimiento para el tratamiento de mis datos personales por parte de Irish School y declaro haber leído la <span class="abrirmodal">
+          <a target="_blank" href="/politica-de-privacidad/"> política de privacidad</a>
+        </span>
+      </label>
+    </div>
+    <div class="enviar">
+      <input type="hidden" name="f_asunto" value="Contacto desde {{ client.domain }}">
+      <button class="botonenviar" type="submit">Enviar {% include 'svg/chevron-right.svg' %}</button>
+    </div>
+  </form>
+</div>

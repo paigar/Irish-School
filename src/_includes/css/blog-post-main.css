@@ -1,0 +1,119 @@
+.cabecera-articulo .titulo p {
+	display: flex;
+	align-items: center;
+	gap: 0.75em;
+	fill: var(--color-accent1-900);
+}
+.cabecera-articulo .titulo svg {
+	filter: drop-shadow(0 0 5px #000);
+	height: 1.25em;
+	margin-left: 0.5em;
+}
+
+.flow {
+	--width-text: 50rem;
+	--width-heading: var(--width-text);
+	margin-block-end: var(--space-xl-2xl);
+}
+.flow > * {
+	margin-inline: auto;
+	max-inline-size: var(--width-text);
+}
+
+.flow > ul {
+	list-style: none;
+	padding: 0;
+}
+.flow > ul li {
+	position: relative;
+	padding-left: 2em;
+}
+.flow > ul li + li {
+	margin-top: 1em;
+}
+.flow > ul li::before {
+	content: "";
+	position: absolute;
+	top: 0.3em;
+	left: 0.3em;
+	background-color: var(--color-accent1);
+	height: 1em;
+	width: 1em;
+	clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+	z-index: -1;
+}
+.flow > .imagen {
+	--decalaje: 6ch;
+	max-inline-size: calc(var(--width-text) + var(--decalaje));
+}
+.gris {
+	background-color: var(--color-bg-200);
+	padding: var(--space-xl-2xl) 0;
+}
+.gris .wrapper + .wrapper {
+	margin-top: var(--space-xl);
+}
+
+/* Compartir en redes sociales */
+
+.sharesn {
+	--size: var(--fs-3);
+	font-size: var(--fs--1);
+	margin-block: var(--space-xl-2xl);
+}
+.sharesn ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc(var(--size) / 5);
+	margin: 0.5em 0;
+	padding: 0;
+	list-style: none;
+}
+.sharesn li {
+	margin: 0;
+	padding: 0;
+}
+.sharesn a {
+	margin: 0;
+	width: var(--size);
+	height: var(--size);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--border-radius);
+	color: var(--color-text-800);
+	overflow: hidden;
+	transition: transform 300ms linear;
+}
+.sharesn a:hover {
+	transform: scale(1.15);
+}
+.sharesn svg {
+	height: max(1rem, var(--size) / 1.75);
+	fill: var(--color-accent1-900);
+}
+.sharesn a.facebook {
+	background-color: #1877f2;
+}
+.sharesn a.twitter {
+	/* background-color: #1da1f2; */
+	background-color: #000;
+}
+.sharesn a.linkedin {
+	background-color: #0a66c2;
+}
+.sharesn a.reddit {
+	background-color: #ff4500;
+}
+.sharesn a.email {
+	background-color: #171a21;
+}
+.sharesn a.whatsapp {
+	background-color: #25d366;
+}
+.sharesn a.telegram {
+	background-color: #0088cc;
+}
+.sharesn a.evernote {
+	background-color: #00a82d;
+}

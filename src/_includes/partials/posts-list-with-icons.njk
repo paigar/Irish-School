@@ -1,0 +1,31 @@
+{% set activePage = page.url | url %}
+{% set listado = listado | excludeByURL(activePage) %}
+
+{% if listado | length < collections[tags] | length %}
+  <h2>Más {{ tags }}...</h2>
+{% else %}
+  <h2>{{ title }}</h2>
+{% endif %}
+<br/>
+
+<ul class="iconslist">
+  {% for item in listado %}
+    {% set link = item.url | url %}
+    <li class="iconitem">
+      {% if item.data.icono %}
+        {% set svg = ["svg/iconos/", item.data.icono, '.svg'] | join %}
+        <div class="icono">
+          {% include svg %}</div>
+      {% endif %}
+      <div class="textbox">
+        <a class="titulo" href="{{ item.url | url }}">{{ item.data.title }}</a>
+        <div class="intro">
+          <p>{{ item.content | excerpt(200) }}</p>
+          <p>
+            <span class="leermas">Seguir leyendo...</span>
+          </p>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,46 @@
+{% set activePage = page.url | url %}
+{% set interna = false %}
+
+<div class="coleccion {{estilo}}">
+  {% for item in coleccion %}
+    {% if activePage == item.url | url %}
+      <h2 class="full-width">Otros {{ tags }}</h2>
+      {% set interna = true %}
+    {% endif %}
+  {% endfor %}
+  <ul {% if interna %}class="cortar{% endif %}">
+    {% for item in coleccion %}
+      {% set link = item.url | url %}
+      {% if activePage != link %}
+        <li class="tarjeta overflow-hidden">
+          {% if item.data.icono %}
+            {% set svg = ["svg/iconos/", item.data.icono, '.svg'] | join %}
+            <a href="{{ item.url | url }}">
+              <span class="icono">
+                {% include svg %}</span>
+            </a>
+          {% elseif item.data.imagencabecera %}
+            {% set path = ["./src/assets/images/", item.data.imagencabecera] | join %}
+            <a href="{{ item.url | url }}">
+              {% imagen './src/assets/images/cabeceras/nosotros.jpg',
+              'servicio',
+              '',
+              '20rem' %}
+            </a>
+          {% endif %}
+          <h3>
+            <a href="{{ link }}">{{ item.data.title }}</a>
+          </h3>
+          <time>
+            {% set definedDate = item.date %}
+            {{ definedDate }}
+          </time>
+          <p>{{ item.data.description }}</p>
+          <p class="leermas">
+            <a href="{{ link }}">Saber más... {% include 'svg/long-arrow-right.svg' %}</a>
+          </p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

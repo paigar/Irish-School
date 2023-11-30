@@ -1,0 +1,14 @@
+<div class="faqs">
+  {% for item in listado %}
+    <div class="faq">
+      <input type="checkbox" name="faq{{loop.index}}" id="faq{{loop.index}}" class="visually-hidden elegirfaq" {% if loop.index == 1 %}{% endif %}>
+      <label for="faq{{loop.index}}">
+        <span>{{ item.data.title }}</span>{% include "svg/chevron-down.svg" %}</label>
+      <div class="texto">
+        <div class="contenidotexto">
+          {{ item.content | safe }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,83 @@
+---
+layout: base
+eleventyComputed:
+  css: ["page-head.css", "blog-post-main.css", "page-animations.css", "components.css", "../components/{{styles.blog.format}}/css/default.css", "../components/{{styles.blog.format}}/css/{{styles.blog.style}}.css"]
+---
+
+<article class="page {% if imagencabecera %}conimagen{% endif %}">
+
+  {% set subtitle %}
+  {% include "svg/calendar-alt.svg" %}
+  {{date | asPostDate}}
+  {% endset %}
+  {% set subtitle = subtitle | safe %}
+  {% include 'partials/article-header.njk' %}
+
+  <div class="wrapper contenido">
+    <div class="flow">
+      {{ content | safe }}
+
+      <div class="sharesn">
+        {# https://github.com/bradvin/social-share-urls #}
+        <p>Comparte:</p>
+
+        {% set pageUrl = ['https://', client.domain, '/', page.url] | join | url %}
+        {% set stitle = title | urlencode %}
+        {% set sttext = content | excerpt(200) %}
+
+        <ul>
+
+          <li>
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u={{ pageUrl }}" target="_blank">
+              {% include 'svg/social/facebook.svg'%}
+            </a>
+          </li>
+          <li>
+            <a class="twitter" href="https://twitter.com/intent/tweet?url={{ pageUrl }}&text={{ stitle }}" target="_blank">
+              {% include 'svg/social/twitterx.svg'%}
+            </a>
+          </li>
+          <li>
+            <a class="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ pageUrl }}" target="_blank">
+              {% include 'svg/social/linkedin.svg'%}
+            </a>
+          </li>
+          <li>
+            <a class="reddit" href="https://reddit.com/submit?url={{pageUrl}}&title={{stitle}}" target="_blank">
+              {% include 'svg/social/reddit.svg'%}
+            </a>
+          </li>
+          <li>
+            <a class="email" href="mailto:?subject={{ stitle }}&body={{ pageUrl }}%0D%0A{{ sttext }}" target="_blank">
+              {% include 'svg/envelope.svg'%}
+            </a>
+          </li>
+          <li>
+            <a class="evernote" href="https://www.evernote.com/clip.action?url={{pageUrl}}&title={{stitle}}" target="_blank">
+              {% include 'svg/social/evernote.svg'%}
+            </a>
+          </li>
+          <li>
+            <a class="whatsapp" href="whatsapp://send/?text={{pageUrl}}%20{{ stitle }}" target="_blank">
+              {% include 'svg/social/whatsapp.svg'%}
+            </a>
+          </li>
+          <li>
+            <a class="telegram" href="https://telegram.me/share/url?url={{pageUrl}}&text={{stitle}}" target="_blank">
+              {% include 'svg/social/telegram.svg'%}
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="component {{styles.blog.format}} {{styles.blog.format}}-{{styles.blog.style}}">
+    <h2 class="title">También te puede interesar...</h2>
+    {% set listado = collections.blogposts | reverse | limit(15) | randomLimit(6, page.url) %}
+    {% include 'components/posts-list-with-images/posts-list-with-images.njk' %}
+    <a class="botonenlace" href="/blog/">Ver todos los artículos</a>
+  </div>
+
+</article>

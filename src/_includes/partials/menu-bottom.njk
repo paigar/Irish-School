@@ -1,0 +1,7 @@
+<ul>
+  {% for item in menus.menuPie %}
+    <li class="nav-item{% if page.url != false and item.slug in page.url %} nav-item-active{% endif %}">
+      <a href="/{{ item.slug }}/">{{ item.text }}</a>
+    </li>
+  {% endfor %}
+</ul>

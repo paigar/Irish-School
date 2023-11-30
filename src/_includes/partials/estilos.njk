@@ -1,0 +1,260 @@
+{% set css %}
+:root {
+	/* Color Texto */
+	--color-text: {{ styles.colors.colorText }};
+	--text-hue: {{ styles.colors.colorText | hextohsl('h') }};
+	--text-sat: {{ styles.colors.colorText | hextohsl('s') }};
+	--text-lgt: {{ styles.colors.colorText | hextohsl('l') }};
+	--color-text-100: hsl(
+		var(--text-hue),
+		var(--text-sat),
+		calc(var(--text-lgt) - 15%)
+	);
+	--color-text-200: hsl(
+		var(--text-hue),
+		var(--text-sat),
+		calc(var(--text-lgt) - 10%)
+	);
+	--color-text-300: hsl(
+		var(--text-hue),
+		var(--text-sat),
+		calc(var(--text-lgt) - 5%)
+	);
+	--color-text-400: hsl(var(--text-hue), var(--text-sat), var(--text-lgt));
+	--color-text-500: hsl(
+		var(--text-hue),
+		var(--text-sat),
+		calc(var(--text-lgt) + 5%)
+	);
+	--color-text-600: hsl(
+		var(--text-hue),
+		var(--text-sat),
+		calc(var(--text-lgt) + 10%)
+	);
+	--color-text-700: hsl(
+		var(--text-hue),
+		var(--text-sat),
+		calc(var(--text-lgt) + 15%)
+	);
+	--color-text-800: hsl(
+		var(--text-hue),
+		var(--text-sat),
+		calc(var(--text-lgt) + 20%)
+	);
+	/* Color Fondo */
+	--color-bg: {{ styles.colors.colorBg }};
+	--bg-hue: {{ styles.colors.colorBg | hextohsl('h') }};
+	--bg-sat: {{ styles.colors.colorBg | hextohsl('s') }};
+	--bg-lgt: {{ styles.colors.colorBg | hextohsl('l') }};
+	--color-bg-100: hsl(
+		var(--bg-hue),
+		var(--bg-sat),
+		calc(var(--bg-lgt) - 15%)
+	);
+	--color-bg-200: hsl(
+		var(--bg-hue),
+		var(--bg-sat),
+		calc(var(--bg-lgt) - 10%)
+	);
+	--color-bg-300: hsl(
+		var(--bg-hue),
+		var(--bg-sat),
+		calc(var(--bg-lgt) - 5%)
+	);
+	--color-bg-400: hsl(var(--bg-hue), var(--bg-sat), var(--bg-lgt));
+	--color-bg-500: hsl(
+		var(--bg-hue),
+		var(--bg-sat),
+		calc(var(--bg-lgt) + 5%)
+	);
+	--color-bg-600: hsl(
+		var(--bg-hue),
+		var(--bg-sat),
+		calc(var(--bg-lgt) + 10%)
+	);
+	--color-bg-700: hsl(
+		var(--bg-hue),
+		var(--bg-sat),
+		calc(var(--bg-lgt) + 15%)
+	);
+	--color-bg-800: hsl(
+		var(--bg-hue),
+		var(--bg-sat),
+		calc(var(--bg-lgt) + 20%)
+	);
+	/* Color acento primario */
+	--color-accent1: {{ styles.colors.colorAccent1 }};
+	--accent1-hue: {{ styles.colors.colorAccent1 | hextohsl('h') }};
+	--accent1-sat: {{ styles.colors.colorAccent1 | hextohsl('s') }};
+	--accent1-lgt: {{ styles.colors.colorAccent1 | hextohsl('l') }};
+	--color-accent1-100: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) - 50%)
+	);
+	--color-accent1-200: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) - 10%)
+	);
+	--color-accent1-300: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) - 5%)
+	);
+	--color-accent1-400: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		var(--accent1-lgt)
+	);
+	--color-accent1-500: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) + 5%)
+	);
+	--color-accent1-600: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) + 10%)
+	);
+	--color-accent1-700: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) + 15%)
+	);
+	--color-accent1-800: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) + 20%)
+	);
+	--color-accent1-900: hsl(
+		var(--accent1-hue),
+		var(--accent1-sat),
+		calc(var(--accent1-lgt) + 100%)
+	);
+	/* Color acento secundario */
+	--color-accent2: {{ styles.colors.colorAccent2 }};
+	--accent2-hue: {{ styles.colors.colorAccent2 | hextohsl('h') }};
+	--accent2-sat: {{ styles.colors.colorAccent2 | hextohsl('s') }};
+	--accent2-lgt: {{ styles.colors.colorAccent2 | hextohsl('l') }};
+	--color-accent2-100: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) - 50%)
+	);
+	--color-accent2-200: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) - 10%)
+	);
+	--color-accent2-300: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) - 5%)
+	);
+	--color-accent2-400: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		var(--accent2-lgt)
+	);
+	--color-accent2-500: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) + 5%)
+	);
+	--color-accent2-600: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) + 10%)
+	);
+	--color-accent2-700: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) + 15%)
+	);
+	--color-accent2-800: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) + 20%)
+	);
+	--color-accent2-900: hsl(
+		var(--accent2-hue),
+		var(--accent2-sat),
+		calc(var(--accent2-lgt) + 100%)
+	);
+
+	--header-bg: {{ styles.colors.headerBg }};
+
+	/* Tamaños fuentes */
+	--fs--1: clamp(0.875rem, 0.79rem + 0.42vw, 1rem);
+	--fs-0: clamp(1rem, 0.88rem + 0.63vw, 1.2rem);
+	--fs-1: clamp(1.1875rem, 1.04rem + 0.73vw, 1.35rem);
+	--fs-2: clamp(1.4375rem, 1.19rem + 1.25vw, 1.75rem);
+	--fs-3: clamp(1.5625rem, 1.1rem + 2.29vw, 2.15rem);
+	--fs-4: clamp(1.75rem, 1.25rem + 2.5vw, 2.85rem);
+	--fs-5: clamp(2.2rem, 1.58rem + 3.58vw, 3.75rem);
+	--fs-6: clamp(2.75rem, 1.33rem + 7.08vw, 5rem);
+	--fs-7: clamp(3rem, 0.88rem + 10.63vw, 7rem);
+
+	/* Fuentes */
+	--font-base: "{{ styles.fonts.fontBase }}", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--font-display: "{{ styles.fonts.fontDisplay }}", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	/* Tamaño elementos */
+	--width-wrapper: min({{ styles.sizes.widthWrapper }}, 100% - 3rem);
+	--width-text: {{ styles.sizes.widthText }};
+	--width-heading: {{ styles.sizes.widthHeading }};
+	--header-height-ext: {{ styles.sizes.headerHeightMobile }};
+	--header-height-int: var(--header-height-ext);
+	--header-height-dif: calc(
+		var(--header-height-ext) - var(--header-height-int)
+	);
+	--border-radius: {{ styles.sizes.borderRadius }};
+
+	/* Espacio */
+	--space-xs: clamp(0.75rem, 0.69rem + 0.29vw, 0.9375rem);
+	--space-s: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
+	--space-m: clamp(1.5rem, 1.38rem + 0.58vw, 1.875rem);
+	--space-l: clamp(2rem, 1.84rem + 0.78vw, 2.5rem);
+	--space-xl: clamp(3rem, 2.77rem + 1.17vw, 3.75rem);
+	--space-2xl: clamp(4rem, 3.69rem + 1.55vw, 5rem);
+	--space-3xl: clamp(6rem, 5.53rem + 2.33vw, 7.5rem);
+	--space-xs-s: clamp(0.75rem, 0.59rem + 0.78vw, 1.25rem);
+	--space-s-m: clamp(1rem, 0.73rem + 1.36vw, 1.875rem);
+	--space-m-l: clamp(1.5rem, 1.19rem + 1.55vw, 2.5rem);
+	--space-l-xl: clamp(2rem, 1.46rem + 2.72vw, 3.75rem);
+	--space-l-2xl: clamp(2rem, 1.07rem + 4.66vw, 5rem);
+	--space-xl-2xl: clamp(3rem, 2.38rem + 3.11vw, 5rem);
+	--space-2xl-3xl: clamp(4rem, 2.91rem + 5.44vw, 7.5rem);
+}
+
+@media (min-width: 54rem) {
+	:root {
+		--header-height-int: {{ styles.sizes.headerHeightIntLaptop }};
+		--header-height-ext: {{ styles.sizes.headerHeightExtLaptop }};
+	}
+}
+{% include "css/reset.css" %}
+{% include "css/fonts.css" %}
+{% include "css/basic.css" %}
+{% include "css/header.css" %}
+{% include "css/footer.css" %}
+{% include "css/cookieconsent.css" %}
+{% include "css/mq.css" %}
+{% for hoja in css %}
+  {% include["css/", hoja] | join %}
+{% endfor %}
+{# Componentes #}
+{% if components | length %}
+  {% include "css/components.css" %}
+{% endif %}
+{% for component in components %}
+  {% include['components/', component.name, "/css/default.css"] | join %}
+  {% if component.style %}
+    {% include['components/', component.name, "/css/", component.style, ".css"] | join %}
+  {% endif %}
+{% endfor %}
+{% endset %}
+<style>
+  {{css | cssmin | safe}}
+</style>

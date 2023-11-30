@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://irishschool.org/">
+  <title>Irish School</title>
+  <subtitle>Feed de noticias de irishschool.org</subtitle>
+  <link href="https://irishschool.org/feed.xml" rel="self"/>
+  <link href="https://irishschool.org/"/>
+  <updated>2023-11-30T08:32:51Z</updated>
+  <id>https://irishschool.org/</id>
+  <author>
+    <name>Irish School</name>
+    <email>info@irishschool.org</email>
+  </author>
+</feed>

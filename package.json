@@ -1,0 +1,31 @@
+{
+	"name": "irish-school",
+	"version": "4.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "eleventy --serve",
+		"build": "eleventy"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-rss": "^1.2.0",
+		"eleventy-plugin-gen-favicons": "^1.1.2",
+		"luxon": "^3.3.0",
+		"sharp": "^0.32.4"
+	},
+	"dependencies": {
+		"@11ty/eleventy-img": "^3.1.0",
+		"clean-css": "^5.3.2",
+		"dayjs": "^1.11.8",
+		"glob": "^8.1.0",
+		"glob-promise": "^6.0.3",
+		"html-minifier-terser": "^7.2.0",
+		"striptags": "^3.2.0",
+		"terser": "^5.18.2"
+	}
+}

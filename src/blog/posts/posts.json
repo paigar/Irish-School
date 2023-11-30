@@ -1,0 +1,6 @@
+{
+	"layout": "blog-post.njk",
+	"tags": "blogposts",
+	"permalink": "/blog/{{ title | slugify }}/",
+	"components": [{ "name": "call-to-action", "filter": "calltoaction" }]
+}
