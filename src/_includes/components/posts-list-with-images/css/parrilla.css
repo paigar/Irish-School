@@ -21,6 +21,7 @@ ul.postslist {
 	grid-row: span 2;
 	height: 100%;
 	width: 100%;
+	aspect-ratio: 6 / 7;
 }
 .blogitem .titulo {
 	padding: var(--space-xs-s);

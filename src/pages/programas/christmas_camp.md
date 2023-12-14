@@ -2,7 +2,7 @@
 title: Christmas Camp
 subtitle: Diviértete en inglés
 tags: "programas"
-imagencabecera: 2023xmas.jpg
+imagencabecera: xmas.png
 components:
   - name: "posts-list-with-images"
     filter: programas
@@ -18,11 +18,6 @@ En nuestro Christmas Camp, creemos en la importancia de aprender a través del j
 
 Ven y celebra la Navidad con nosotros en un ambiente divertido y enriquecedor. Estamos emocionados de ser parte de esta temporada festiva y ayudar a los niños a crear recuerdos duraderos mientras aprenden y se divierten.
 
-### FECHAS:
-
-- Del 26 al 30 de Diciembre / Del 2 al 5 de Enero
-- Último día de inscripción. 20 de diciermbre
-
 ### HORARIO:
 
 - De 09:30 h a 15:30 (servicio EARLY BIRDS desde las 8.00 y retén hasta las 16.00)
@@ -35,12 +30,6 @@ Ven y celebra la Navidad con nosotros en un ambiente divertido y enriquecedor. E
 
 - COLEGIO IRLANDESAS LEIOA
 
-### PRECIOS:
-
-- Primera semana 190€ / segunda semana:165€ / COMPLETO 295€
-- Descuento hermanos / TITULARES DEL PLAN Gaztedi Kutxabank CONSULTAD
-- BUS: 40€ ( miínimo 20 plazas por Bus) Salidas desde Bilbao y Getxo
-
 ### PROGRAMA DE NAVIDAD
 
 - FUN ENGLISH
@@ -48,15 +37,6 @@ Ven y celebra la Navidad con nosotros en un ambiente divertido y enriquecedor. E
 - GYMKANAS
 - IRISH COOKING
 - LEARN CHINESE IN ENGLISH: CRAFTS / CALIGRAPHY alumnos de primaria
-
-### FORMA DE PAGO:
-
-- Para reservar plaza se debe ingresar el importe total con el nombre del niñ@ en el siguiente nº de cuenta de Kutxabank: ES82 2095 0047 8191 1037 5391
-- La plaza no será reservada hasta que no se haya recibido notificación bancaria del ingreso.
-
-### INSCRIPCIONES:
-
-- Rellenar el [formulario online](https://forms.gle/HbpaYvdC73ULSKhX8)
 
 ### IMPORTANTE
 

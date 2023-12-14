@@ -1,6 +1,6 @@
 ---
 title: Nuestras Ventajas
-imagencabecera: ventajas.jpg
+imagencabecera: IMG_20231203_224540_137.webp
 layout: base.njk
 permalink: false
 date: 2016-01-03

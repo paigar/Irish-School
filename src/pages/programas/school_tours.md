@@ -2,7 +2,7 @@
 title: School Tours
 subtitle: En este programa los participantes asisten como oyentes a las clases de un centro escolar por las mañanas y tienen actividades organizadas por las tardes.
 tags: "programas"
-imagencabecera: 2023tours.jpg
+imagencabecera: 2023trimestre2.jpg
 css: ["integrate-first-component.css"]
 components:
   - name: "vertical-slider"

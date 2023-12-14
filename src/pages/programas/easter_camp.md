@@ -2,7 +2,7 @@
 title: Easter Camp
 subtitle: Diviértete en inglés
 tags: "programas"
-imagencabecera: 2023eastern.jpg
+imagencabecera: easter.png
 components:
   - name: "posts-list-with-images"
     filter: programas

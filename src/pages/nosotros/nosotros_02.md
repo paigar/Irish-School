@@ -1,6 +1,6 @@
 ---
 title: Política de calidad
-imagencabecera: calidad.jpg
+imagencabecera: IMG_20230913_072954_133.jpg
 layout: page.njk
 permalink: /politica-de-calidad/
 date: 2016-01-02

@@ -1,6 +1,6 @@
 ---
 title: Christmas Camp
-imagencabecera: xmas.jpg
+imagencabecera: xmas.png
 layout: base.njk
 permalink: false
 tags: slider

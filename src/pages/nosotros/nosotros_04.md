@@ -1,6 +1,6 @@
 ---
 title: Nuestra Garantía
-imagencabecera: garantia.jpg
+imagencabecera: IMG_20231201_152459_359.webp
 layout: base.njk
 permalink: false
 date: 2016-01-04

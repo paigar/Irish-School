@@ -2,7 +2,7 @@
 title: Irish Daycamp
 subtitle: "Sumérgete en el Mundo del Inglés: Nuestro Programa de Verano para Niños y Niñas"
 tags: "programas"
-imagencabecera: 2023daycamp.jpg
+imagencabecera: IMG_20230714_005158_685.jpg
 css: ["integrate-first-component.css"]
 components:
   - name: "vertical-slider"
