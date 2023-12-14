@@ -58,6 +58,10 @@
 				{
 					"text": "Medio Trimestre",
 					"slug": "medio-trimestre"
+				},
+				{
+					"text": "Camps",
+					"slug": "camps"
 				}
 			]
 		},
