@@ -36,6 +36,7 @@
 }
 h4 {
 	margin-block: 1em;
+	max-inline-size: unset;
 }
 
 .botonenviar {
