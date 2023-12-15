@@ -1,7 +1,7 @@
 ---
 title: Inscripción a Summer Residencial
 permalink: /inscripcion/summer-residencial/
-imagencabecera: IMG_20230611_181344_170.jpg
+imagencabecera: IMG-20230929-WA0001.jpg
 css: ["integrate-first-component.css"]
 components:
   - name: "form-programas"
