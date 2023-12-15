@@ -1,0 +1,99 @@
+<div class="wrapper">
+  <form action="#" class="form_inscripcion">
+    <h4>Datos personales</h4>
+    <div class="linea">
+      <label for="apellidos">Nombre / Apellidos *</label>
+      <input type="text" name="apellidos" id="apellidos" required>
+    </div>
+    <div class="linea">
+      <label for="edadcurso">Edad / Curso *</label>
+      <input type="text" name="edadcurso" id="edadcurso" required>
+    </div>
+    <div class="linea">
+      <label for="email">E-mail *</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div class="linea">
+      <label for="buscomedor">Utilizará servicio de autobús / comedor *</label>
+      <select id="buscomedor" name="buscomedor" required>
+        <option value="" selected="selected">Choose / Elige:</option>
+        <option value="Mes completo">Mes completo</option>
+        <option value="Primera quincena">Primera quincena</option>
+        <option value="Segunda quincena">Segunda quincena</option>
+        <option value="Semanas sueltas">Semanas sueltas</option>
+      </select>
+    </div>
+    <div class="linea">
+      <label for="semanas">En caso de elegir 'semanas sueltas' indicar cuáles</label>
+      <input type="text" name="semanas" id="semanas">
+    </div>
+    <div class="linea">
+      <label for="usobus">Utilizará bus para *</label>
+      <select id="usobus" name="usobus" required>
+        <option value="" selected="selected">Choose / Elige:</option>
+        <option value="Ida">Ida</option>
+        <option value="Vuelta">Vuelta</option>
+        <option value="Ida y vuelta">Ida y vuelta</option>
+        <option value="Sin autobus.  Sólo comedor">Sin autobus.  Sólo comedor</option>
+      </select>
+    </div>
+    <div class="linea">
+      <label>Recorrido del autobus</label>
+      <p>El recorrido de  los autobuses comenzará a las 8.30 y la salida de regreso del colegio será a las 15.30. 
+Unos días antes os enviaremos el horario aproximado  de recogida y el recorrido concreto. 
+A diferencia del curso la ruta se elabora en función de la demanda de los alumnos.</p>
+    </div>
+
+    <h4>Datos de las personas que diariamente traerán y recogerán al alumno</h4>
+    <div class="linea">
+      <label for="tutornombre">Nombre / Apellidos *</label>
+      <input type="text" name="tutornombre" id="tutornombre" required>
+    </div>
+    <div class="linea">
+      <label for="tutordni">DNI *</label>
+      <input type="text" name="tutordni" id="tutordni" required>
+    </div>
+    <div class="linea">
+      <label for="tutortfno">Teléfono *</label>
+      <input type="text" name="tutortfno" id="tutortfno" required>
+    </div>
+
+    <h4>Sólo para los alumnos del campus de Padel / Tenis</h4>
+    <div class="linea">
+      <label for="padelcomedor">Utilizará servicio de comedor</label>
+      <select id="padelcomedor" name="padelcomedor">
+        <option value="" selected="selected">Choose / Elige:</option>
+        <option value="Si">Si</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    <div class="linea">
+      <label for="padelduracion">Especifique duración y fechas</label>
+      <input type="text" name="padelduracion" id="padelduracion">
+    </div>
+    <div class="linea">
+      <label for="padelalergia">¿Tiene algún tipo de alergia alimentaria?</label>
+      <select id="padelalergia" name="padelalergia">
+        <option value="" selected="selected">Choose / Elige:</option>
+        <option value="Si">Si</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    <div class="linea">
+      <label for="padelalergiasdetalle">Especifique cuáles por favor</label>
+      <input type="text" name="padelalergiasdetalle" id="padelalergiasdetalle">
+    </div>
+
+    <div class="legal">
+      <input type="checkbox" id="f_legal" name="f_legal" required="required">
+      <label for="f_legal">Doy mi consentimiento para el tratamiento de mis datos personales por parte de Irish School y declaro haber leído la <span class="abrirmodal">
+          <a target="_blank" href="/politica-de-privacidad/"> política de privacidad</a>
+        </span>
+      </label>
+    </div>
+    <div class="enviar">
+      <input type="hidden" name="f_asunto" value="Contacto desde {{ client.domain }}">
+      <button class="botonenviar" type="submit">Enviar {% include 'svg/chevron-right.svg' %}</button>
+    </div>
+  </form>
+</div>

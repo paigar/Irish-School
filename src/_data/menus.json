@@ -6,8 +6,8 @@
 			"slug": "programas",
 			"dropdown": [
 				{
-					"text": "Summer Homestay",
-					"slug": "summer-homestay"
+					"text": "Summer Residencial",
+					"slug": "summer-residencial"
 				},
 				{
 					"text": "Inmersión en Familia",
@@ -44,8 +44,8 @@
 			"slug": "inscripcion",
 			"dropdown": [
 				{
-					"text": "Summer Homestay",
-					"slug": "summer-homestay"
+					"text": "Summer Residencial",
+					"slug": "summer-residencial"
 				},
 				{
 					"text": "Inmersión en Familia",
@@ -58,6 +58,10 @@
 				{
 					"text": "Medio Trimestre",
 					"slug": "medio-trimestre"
+				},
+				{
+					"text": "July Services",
+					"slug": "july-services"
 				},
 				{
 					"text": "Camps",

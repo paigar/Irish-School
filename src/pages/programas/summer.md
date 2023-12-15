@@ -1,8 +1,8 @@
 ---
-title: Summer Homestay
+title: Summer Residencial
 subtitle: 4 semanas duración. Destinado a estudiantes de 9 a 13 años.
 tags: "programas"
-imagencabecera: 2023summer.jpg
+imagencabecera: IMG_20230611_181344_170.jpg
 css: ["integrate-first-component.css"]
 components:
   - name: "vertical-slider"

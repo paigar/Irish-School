@@ -1,7 +1,7 @@
 ---
 title: Inscripción a Camps
 permalink: /inscripcion/camps/
-imagencabecera: 2023inscripcion.jpg
+imagencabecera: IMG_20230714_005158_685.jpg
 css: ["integrate-first-component.css"]
 ---
 
