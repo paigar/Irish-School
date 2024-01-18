@@ -1,5 +1,5 @@
 ---
-title: Inscripción a Camps
+title: Inscripción a July Services
 permalink: /inscripcion/gracias-jserv/
 imagencabecera: form.png
 css: ["integrate-first-component.css"]
