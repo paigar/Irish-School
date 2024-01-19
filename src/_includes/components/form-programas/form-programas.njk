@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <form action="#" class="form_inscripcion" name="Inscripción {{programa}}" action="/inscripcion/gracias/" data-netlify="true">
+  <form action="#" class="form_inscripcion" name="Inscripción {{programa}}" action="https://forms.idenautas.work/irishschool-programas.php">
     <h4>Datos personales</h4>
     <div class="linea">
       <label for="email">E-mail *</label>
@@ -112,7 +112,8 @@
       </label>
     </div>
     <div class="enviar">
-      <input type="hidden" name="f_asunto" value="Contacto desde {{ client.domain }}">
+      <input type="hidden" name="f_asunto" value="Inscripción {{programa}}">
+      <input type="hidden" name="secreto" value="Dk(asTs3WSGYDb9dd*f%">
       <button class="botonenviar" type="submit">Enviar {% include 'svg/chevron-right.svg' %}</button>
     </div>
   </form>
