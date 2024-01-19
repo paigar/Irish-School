@@ -30,7 +30,7 @@ components:
   <div class="contacto">
     <div class="formulario">
       <h2>Envíanos un mensaje</h2>
-      <form enctype="multipart/form-data" name="Contacto desde formulario irishschool.org" action="https://forms.idenautas.work/irishschool-contacto.php" id="contactform">
+      <form enctype="multipart/form-data" name="Contacto desde formulario irishschool.org" action="https://forms.idenautas.work/irishschool-contacto.php" id="contactform" enctype="multipart/form-data" method="POST">
         <div class="grupo">
           <label for="f_nombre">Nombre:</label>
           <input title="Mínimo 3 caracteres" name="f_nombre" id="f_nombre" pattern=".{3,}" required="required" type="text">
@@ -56,6 +56,7 @@ components:
         </div>
         <div class="enviar">
           <input type="hidden" name="f_asunto" value="Contacto desde {{ client.domain }}">
+          <input type="hidden" name="secreto" value="j]e+u*&v4We[DfGeR?+q">
           <button class="botonenviar" type="submit">Enviar {% include 'svg/chevron-right.svg' %}</button>
         </div>
       </form>

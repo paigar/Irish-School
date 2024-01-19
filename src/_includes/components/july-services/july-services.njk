@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <form action="#" class="form_inscripcion" name="Inscripción July Services" action="https://forms.idenautas.work/irishschool-jservices.php">
+  <form class="form_inscripcion" name="Inscripción July Services" enctype="multipart/form-data" method="POST" action="https://forms.idenautas.work/irishschool-jservices.php">
     <h4>Datos personales</h4>
     <div class="linea">
       <label for="apellidos">Nombre / Apellidos *</label>
@@ -92,7 +92,8 @@ A diferencia del curso la ruta se elabora en función de la demanda de los alumn
       </label>
     </div>
     <div class="enviar">
-      <input type="hidden" name="f_asunto" value="Contacto desde {{ client.domain }}">
+      <input type="hidden" name="f_asunto" value="Inscripción July Services">
+      <input type="hidden" name="secreto" value="wH(gU4^d.S7*=[0(D2NC">
       <button class="botonenviar" type="submit">Enviar {% include 'svg/chevron-right.svg' %}</button>
     </div>
   </form>
