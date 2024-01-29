@@ -2,6 +2,14 @@
   <form class="form_inscripcion" name="Inscripción {{programa}}" enctype="multipart/form-data" method="POST" action="https://forms.idenautas.work/irishschool-programas.php">
     <h4>Datos personales</h4>
     <div class="linea">
+      <label for="tutoresemail">E-mail de los padres o tutores legales / Email of parents or legal guardians*</label>
+      <input type="email" name="tutoresemail" id="tutoresemail" required>
+    </div>
+    <div class="linea">
+      <label for="tutorestfno">Teléfono de los padres o tutores legales / Phone of parents or legal guardians*</label>
+      <input type="email" name="tutorestfno" id="tutorestfno" required>
+    </div>
+    <div class="linea">
       <label for="email">E-mail *</label>
       <input type="email" name="email" id="email" required>
     </div>
@@ -75,6 +83,18 @@
         <option value="Primer Trimestre" {% if programa == "primertrimestre" %}selected{% endif %}>Primer Trimestre</option>
         <option value="Medio Trimestre" {% if programa == "mediotrimestre" %}selected{% endif %}>Medio Trimestre</option>
       </select>
+    </div>
+    <div class="linea">
+      <label for="alergias">¿Tiene algún tipo de alergia alimentaria? / Do you have any type of food allergies? *</label>
+      <select id="alergias" name="alergias" required>
+        <option value="" selected="selected">Choose / Elige:</option>
+        <option value="Si">Si</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    <div class="linea">
+      <label for="detallealergias">Especifique cuáles por favor / Please specify which ones</label>
+      <input type="text" name="detallealergias" id="detallealergias">
     </div>
     <h4>Datos de interes</h4>
     <div class="linea">
