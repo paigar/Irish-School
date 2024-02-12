@@ -11,4 +11,9 @@
       </div>
     </div>
   {% endfor %}
+  {% if linkinscripcion %}
+    <div class="faq">
+      <a class="linkfaq" href="{{linkinscripcion}}" {% if "https://" in linkinscripcion %}target="_blank"{% endif%}>Inscribirme en {{title}}</a>
+    </div>
+  {% endif %}
 </div>

@@ -3,6 +3,7 @@ title: Medio trimestre
 subtitle: Los alumnos estudian en un colegio Irlandés el curso correspondiente a su equivalente en España, reincorporándose a la vuelta del viaje.
 tags: "programas"
 imagencabecera: IMG-20231130-WA0073.jpg
+linkinscripcion: /inscripcion/medio-trimestre/
 css: ["integrate-first-component.css"]
 components:
   - name: "vertical-slider"
