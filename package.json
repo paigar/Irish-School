@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "eleventy --serve",
-		"build": "eleventy"
+		"build": "eleventy",
+		"encrypt": "find ./_site/zona-privada/ -type f -name '*.html' -exec staticrypt {} irish -o {} -f ./_site/login/index.html \\;"
 	},
 	"keywords": [],
 	"author": "",

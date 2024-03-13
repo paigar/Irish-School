@@ -71,7 +71,8 @@
 		},
 		{ "text": "English Club", "slug": "english-club-irlandesas" },
 		{ "text": "Nosotros", "slug": "sobre-nosotros" },
-		{ "text": "Contacto", "slug": "contacto" }
+		{ "text": "Contacto", "slug": "contacto" },
+		{ "text": "Zona privada", "slug": "zona-privada" }
 	],
 	"menuPie": [
 		{ "text": "Galería", "slug": "galeria" },

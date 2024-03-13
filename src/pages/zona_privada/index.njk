@@ -1,0 +1,16 @@
+---
+title: "Zona privada"
+imagencabecera: privado.png
+permalink: /zona-privada/
+eleventyExcludeFromCollections: true
+css: []
+folder: index
+---
+
+<ul class="zonaprivada">
+  {% for item in collections.privado %}
+    <li>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
