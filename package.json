@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "eleventy --serve",
 		"build": "eleventy",
-		"encrypt": "find ./_site/zona-privada/ -type f -name '*.html' -exec staticrypt {} irish -o {} -f ./_site/login/index.html \\;"
+		"encrypt": "staticrypt ./_site/zona-privada/daycamp/index.html -p irish -d ./_site/zona-privada/daycamp/ --short  --template-button ENTER && staticrypt ./_site/zona-privada/programas-de-ingles/index.html -p irish -d ./_site/zona-privada/programas-de-ingles/ --short --template-button ENTER"
 	},
 	"keywords": [],
 	"author": "",
