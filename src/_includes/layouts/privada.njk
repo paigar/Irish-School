@@ -1,19 +1,25 @@
 ---
 layout: page.njk
 css: ["privada.css"]
+js: ["privada.js"]
 ---
 
 {{ content | safe }}
 
-<div class="listadoficheros flow">
-  {% set ficheros = folder | listaficheros %}
-  {% if ficheros | length %}
-    <h3>Documentación:</h3>
-    <ul>
-      {% for fichero in ficheros %}
-        <li>
-          <a href="/assets/docs/{{folder}}/{{fichero}}" target="_blank">{{fichero}}</a>
-        {% endfor %}
-    </ul>
-  {% endif %}
-</div>
+{% if folder != "" %}
+  <div class="listadoficheros flow">
+    {% set ficheros = folder | listaficheros %}
+    {% if ficheros | length %}
+      <h3>Documentación:</h3>
+      <ul>
+        {% for fichero in ficheros %}
+          <li>
+            <a href="/assets/docs/{{folder}}/{{fichero}}" target="_blank">{{fichero}}</a>
+          {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  <div class="logout">
+    <a id="logout" href="/zona-privada/">Cerrar sesión</a>
+  </div>
+{% endif %}

@@ -15,3 +15,17 @@
 .zonaprivada {
 	font-size: var(--fs-2);
 }
+#logout {
+	font-size: var(--fs-1);
+	background-color: var(--color-accent1);
+	color: var(--color-accent1-900);
+	padding: 0.6em 1.5em;
+	border-radius: var(--border-radius);
+	transition: 300ms;
+}
+#logout:hover {
+	background-color: var(--color-text);
+}
+.flow ul {
+	list-style: none;
+}
