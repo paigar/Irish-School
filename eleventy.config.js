@@ -116,7 +116,6 @@ module.exports = function (eleventyConfig) {
 	/* Añadir imágenes de un directorio */
 	eleventyConfig.addFilter("listaficheros", function (dir = "") {
 		const filesPath = path.resolve("./src/assets/docs/" + dir + "/");
-		console.log(filesPath);
 		const files = fs.readdirSync(filesPath);
 		const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
 
