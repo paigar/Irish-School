@@ -3,7 +3,7 @@ title: Irish Daycamp
 subtitle: "Sumérgete en el Mundo del Inglés: Nuestro Programa de Verano para Niños y Niñas"
 tags: "programas"
 imagencabecera: IMG_20230714_005158_685.jpg
-linkinscripcion: https://docs.google.com/forms/d/e/1FAIpQLSeiDp4p1M9Ha3abFPfao6aQG-WBdj8MYNve0xaA9ATey3_DFQ/viewform
+linkinscripcion: https://forms.gle/To8gga5eehxHBCoE8
 css: ["integrate-first-component.css"]
 components:
   - name: "vertical-slider"
