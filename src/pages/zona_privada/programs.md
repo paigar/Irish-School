@@ -6,4 +6,4 @@ css: []
 folder: programs
 ---
 
-![programas de ingles](https://www.irishschool.org/assets/docs/programs/Screenshot_20240430-215131~2.png)
+![programas de ingles](/assets/docs/Screenshot_20240430-215131~2.png)
