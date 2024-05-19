@@ -4,7 +4,7 @@ imagencabecera: IMG-20221009-WA0000-1280w.jpeg
 layout: base.njk
 permalink: false
 tags: slider
-order: 2
+order: 1
 ---
 
 [Apúntate](/inscripcion/)
