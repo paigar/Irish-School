@@ -6,4 +6,4 @@ css: []
 folder: daycamp
 ---
 
-![summer camp](/assets/docs/SUMMER_CAMP_2024.png)
+![summer camp](/assets/docs/irish-camp-2024.jpg)
