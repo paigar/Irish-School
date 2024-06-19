@@ -16,3 +16,10 @@ folder: programs
   <li>18 Junio Bilbao (Irlandesas/Europa) 17.00</li>
   <li>26 Junio Sevilla.(Safa )17.00</li>
 </ul>
+<p>Documentación Necesaria para viajes a Irlanda</p>
+<ul>
+  <li>PASAPORTE </li>
+  <li>TARJETA SANITARIA EUROPEA</li>
+  <li>PERMISO DE MENORES PARA VIAJAR FUERA DE ESPAÑA (adjuntamos <a href="https://sede.policia.gob.es/portalCiudadano/_es/tramites_ciudadania_documentacionviajar.php#" target="_blank">enlace</a> y formulario)</li>
+</ul>
+<p>
