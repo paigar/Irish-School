@@ -13,6 +13,9 @@
     {% if component.reverse %}
       {% set listado = listado | reverse %}
     {% endif %}
+    {% if component.order %}
+      {% set listado = listado | sortByOrder %}
+    {% endif %}
     {% if component.random %}
       {% set listado = listado | randomLimit(component.limit) %}
     {% endif %}

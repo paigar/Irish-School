@@ -2,6 +2,7 @@
 title: Christmas Camp
 subtitle: Diviértete en inglés
 tags: "programas"
+order: 8
 imagencabecera: xmas.png
 components:
   - name: "posts-list-with-images"

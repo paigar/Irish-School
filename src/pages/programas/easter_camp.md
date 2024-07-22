@@ -2,6 +2,7 @@
 title: Easter Camp
 subtitle: Diviértete en inglés
 tags: "programas"
+order: 7
 imagencabecera: easter.png
 components:
   - name: "posts-list-with-images"

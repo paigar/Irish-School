@@ -2,6 +2,7 @@
 title: Summer Residencial
 subtitle: 4 semanas duración. Destinado a estudiantes de 9 a 13 años.
 tags: "programas"
+order: 4
 imagencabecera: IMG-20230929-WA0001.jpg
 linkinscripcion: /inscripcion/summer-residencial/
 css: ["integrate-first-component.css"]

@@ -6,20 +6,20 @@
 			"slug": "programas",
 			"dropdown": [
 				{
-					"text": "Summer Residencial",
-					"slug": "summer-residencial"
-				},
-				{
-					"text": "Inmersión en Familia",
-					"slug": "inmersion-en-familia"
-				},
-				{
 					"text": "Primer trimestre",
 					"slug": "primer-trimestre"
 				},
 				{
 					"text": "Medio Trimestre",
 					"slug": "medio-trimestre"
+				},
+				{
+					"text": "Inmersión en Familia",
+					"slug": "inmersion-en-familia"
+				},
+				{
+					"text": "Summer Residencial",
+					"slug": "summer-residencial"
 				},
 				{
 					"text": "Irish Daycamp",

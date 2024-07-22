@@ -7,6 +7,7 @@ components:
   - name: "posts-list-with-images"
     filter: programas
     style: "parrilla"
+    order: orden
     heading: "Nuestros programas"
 ---
 
