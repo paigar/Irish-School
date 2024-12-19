@@ -1,6 +1,6 @@
 ---
 title: Conócenos
-imagencabecera: equipo.jpg
+imagencabecera: IMG-20241004-WA0018.jpg
 layout: base.njk
 permalink: false
 tags: slider

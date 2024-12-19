@@ -1,6 +1,6 @@
 ---
 title: Programas de inglés
-imagencabecera: programas.jpg
+imagencabecera: IMG-20240712-WA0031.jpg
 layout: base.njk
 permalink: false
 tags: slider
