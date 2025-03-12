@@ -1,5 +1,5 @@
 ---
-title: Programas de inglés
+title: Inscríbete en Irish Daycamp
 imagencabecera: IMG-20240731-WA0019.jpg
 layout: base.njk
 permalink: false
@@ -7,6 +7,7 @@ tags: slider
 order: 4
 ---
 
-Explora nuestras diversas opciones de programas de inglés y prepárate para una experiencia de aprendizaje única que te abrirá las puertas a un nuevo mundo de oportunidades lingüísticas y culturales.
+Sumérgete en el Mundo del Inglés: Nuestro Programa de Verano para Niños y Niñas. <br />
+**Ya está abierto el plazo de inscripción para Irish Daycamp**
 
-[Descúbrelos ya](/programas/)
+[Inscríbete ya](/inscripcion/camps/)
