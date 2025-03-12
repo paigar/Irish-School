@@ -100,6 +100,15 @@
 	text-shadow: none;
 }
 
+.carousel-cell .texto a::after {
+	content: "";
+	position: absolute;
+	width: 200vw;
+	height: 200vh;
+	top: -100vh;
+	left: -100vw;
+}
+
 /*! Flickity v2.3.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */

@@ -7,7 +7,7 @@ tags: slider
 order: 4
 ---
 
-Sumérgete en el Mundo del Inglés: Nuestro Programa de Verano para Niños y Niñas. <br />
+**Colegio Irlandesas (Leioa)**. <br />
 **Ya está abierto el plazo de inscripción para Irish Daycamp**
 
 [Inscríbete ya](/inscripcion/camps/)
