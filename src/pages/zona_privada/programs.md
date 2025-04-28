@@ -6,15 +6,14 @@ css: []
 folder: programs
 ---
 
-![programas de ingles](/assets/docs/Screenshot_20240430-215131~2.png)
+![programas de ingles](/assets/docs/academic-dates-2025.jpg)
 
-<p>Próximas reuniones:</p>
+<p>REUNIONES PRE SALIDA 2025:</p>
 <ul>
-  <li>22 Mayo .Barcelona(Maristas) 16.30</li>
-  <li>4 de Junio.Madrid.colegios grupo SEI (La Merced)17.30</li>
-  <li>11 de Junio Madrid (Montpellier/Maria Virgen)16.00</li>
-  <li>18 Junio Bilbao (Irlandesas/Europa) 17.00</li>
-  <li>26 Junio Sevilla.(Safa )17.00</li>
+  <li>BILBAO</li>
+  <li>BARCELONA</li>
+  <li>MADRID</li>
+  <li>SEVILLA</li>
 </ul>
 <p>Documentación Necesaria para viajes a Irlanda</p>
 <ul>
