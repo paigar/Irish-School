@@ -10,10 +10,12 @@ folder: programs
 
 <p>REUNIONES PRE SALIDA 2025:</p>
 <ul>
-  <li>BILBAO</li>
-  <li>BARCELONA</li>
-  <li>MADRID</li>
-  <li>SEVILLA</li>
+  <li>Barcelona: 19 Mayo</li>
+  <li>Sevilla: 29 de Mayo</li>
+  <li>Málaga: 4 Junio</li>
+  <li>Bilbao: 10 Junio</li>
+  <li>Madrid: 17 de Junio</li>
+  <li><b>CONSULTAD HORARIOS Y LUGARES DE CONVOCATORIA</b></li>
 </ul>
 <p>Documentación Necesaria para viajes a Irlanda</p>
 <ul>
