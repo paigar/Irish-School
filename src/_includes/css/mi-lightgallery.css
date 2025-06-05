@@ -1,0 +1,21 @@
+#lightgallery {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#lightgallery img {
+    width: 100%;
+    height: 20vh;
+    max-height: 200px;
+    background-size: cover;
+    margin: 0;
+    object-fit: cover;
+}
+
+#lightgallery a{
+    flex-grow: 1;
+}
