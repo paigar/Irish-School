@@ -143,7 +143,8 @@ module.exports = function (eleventyConfig) {
 			src,
 			alt,
 			caption,
-			sizes = "(min-width: 55rem) 820px, 100vw"
+			sizes = "(min-width: 55rem) 820px, 100vw",
+			imageFormat = ["webp", "jpeg"]
 		) {
 			if (!alt) {
 				throw new Error(`Missing \`alt\` on myImage from: ${src}`);
