@@ -1,6 +1,6 @@
 ---
 title: Política de calidad
-imagencabecera: politicacalidad.jpg
+imagencabecera: 2026loreto.jpg
 layout: page.njk
 permalink: /politica-de-calidad/
 date: 2016-01-02

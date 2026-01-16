@@ -257,7 +257,7 @@ https://flickity.metafizzy.co
 
 @media (min-width: 54rem) {
 	.main-carousel {
-		--altura-slider: calc(100vh - var(--header-height-ext));
+		--altura-slider: calc(100vh - var(--header-height-ext) - 225px);
 	}
 	.carousel-cell .imagen::after {
 		width: 100%;

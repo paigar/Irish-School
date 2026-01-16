@@ -1,6 +1,6 @@
 ---
 title: Nuestra Garantía
-imagencabecera: IMG_20231201_152459_359.webp
+imagencabecera: wall_of_smile.jpg
 layout: base.njk
 permalink: false
 date: 2016-01-04

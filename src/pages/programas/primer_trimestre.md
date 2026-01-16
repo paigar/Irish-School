@@ -3,7 +3,7 @@ title: Primer trimestre
 subtitle: Los alumnos estudian en un colegio Irlandés el curso correspondiente a su equivalente en España, reincorporándose a la vuelta del viaje.
 tags: "programas"
 order: 1
-imagencabecera: IMG2023-12-15_23c60b73.jpg
+imagencabecera: 2026trimestre.jpg
 linkinscripcion: /inscripcion/primer-trimestre/
 css: ["integrate-first-component.css"]
 components:

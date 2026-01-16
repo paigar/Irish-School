@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "eleventy --serve",
 		"build": "eleventy",
-		"encrypt": "staticrypt ./_site/zona-privada/daycamp/index.html -p irish -d ./_site/zona-privada/daycamp/ --short  --template-button ENTER && staticrypt ./_site/zona-privada/programas-de-ingles/index.html -p irish -d ./_site/zona-privada/programas-de-ingles/ --short --template-button ENTER"
+		"encrypt": "staticrypt ./_site/zona-privada/daycamp/index.html -p Irish26 -d ./_site/zona-privada/daycamp/ --short  --template-button ENTER && staticrypt ./_site/zona-privada/programas-de-ingles/index.html -p Irish26 -d ./_site/zona-privada/programas-de-ingles/ --short --template-button ENTER"
 	},
 	"keywords": [],
 	"author": "",

@@ -23,3 +23,9 @@ Nuestro programa de verano, que se lleva a cabo durante el mes de julio, está d
 Nuestros programas están diseñados para niños y niñas de todas las edades, lo que les permite aprender inglés de una manera lúdica y divertida, adaptándose a sus niveles y conocimientos del idioma. También ofrecemos actividades complementarias, como el uso de medios audiovisuales y ordenadores (para niveles superiores), y la práctica diaria de deportes en las excelentes instalaciones del colegio.
 
 Al final del programa, los participantes recibirán un diploma e informe final de aprovechamiento que destacará sus logros y progresos en el aprendizaje del inglés.
+
+### Featured Activities:
+
+- Inflatable Fun: Wrecking Ball, Mega Bouncy Castle, Total Wipeout, and more!
+- Team Sports: Soccer, Rounders, Obstacle Courses, Tug-O-War, and others to foster teamwork.
+- Creative Play: Giant Connect 4, Puzzle Challenges, and Parachute Games to spark imagination.
