@@ -16,7 +16,6 @@
             link, 'img/', item.data.imagencabecera | thumbname(width)
           ] | join %}
           <picture>
-            <source srcset="{{ imagen }}.avif" type="image/avif">
             <source srcset="{{ imagen }}.webp" type="image/webp">
             <img src="{{ imagen }}.jpg" alt="{{ item.data.title }} " loading="lazy"/>
           </picture>
