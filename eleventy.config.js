@@ -158,7 +158,7 @@ module.exports = function (eleventyConfig) {
 			}
 			let metadata = await Image(imgSrc, {
 				widths: [20, 420, 820, 1280, 1800],
-				formats: ["avif", "webp", "jpeg"],
+				formats: ["webp", "jpeg"],
 				urlPath: urlPath,
 				outputDir: outputDir,
 				filenameFormat: function (id, src, width, format, options) {
